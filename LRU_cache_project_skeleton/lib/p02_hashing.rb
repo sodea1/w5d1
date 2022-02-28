@@ -1,5 +1,5 @@
 class Integer
-  # Integer#hash already implemented for you
+  # Integer#hash already implemented for you  
 end
 
 class Array
