@@ -1,7 +1,9 @@
+require "byebug"
 require_relative 'p04_linked_list'
 
 class HashMap
   attr_accessor :count
+  attr_reader :store
 
   def initialize(num_buckets = 8)
     @store = Array.new(num_buckets) { LinkedList.new }
@@ -9,18 +11,22 @@ class HashMap
   end
 
   def include?(key)
+
   end
 
   def set(key, val)
   end
 
   def get(key)
+    link_list = bucket(key)
+    link_list.get(key)
   end
 
   def delete(key)
   end
 
   def each
+    
   end
 
   # uncomment when you have Enumerable included
@@ -44,6 +50,8 @@ class HashMap
   end
 
   def bucket(key)
+    debugger
+    self.store[key.hash % num_buckets]
     # optional but useful; return the bucket corresponding to `key`
   end
 end

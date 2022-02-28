@@ -54,7 +54,7 @@ class LinkedList
   end
 
   def get(key)
-    self.each do |node| # how does this each function work
+    self.each do |node| 
       return node.val if node.key == key
     end
     nil
@@ -110,7 +110,7 @@ class LinkedList
   end
 
   # uncomment when you have `each` working and `Enumerable` included
-  # def to_s
-  #   inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
-  # end
+  def to_s
+    inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
+  end
 end
